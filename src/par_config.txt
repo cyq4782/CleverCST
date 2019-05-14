@@ -1,0 +1,9 @@
+{min}a=1
+{max}a=5
+{step}a=0.1
+{min}b=1
+{max}b=5
+{step}b=0.1
+{min}r=2
+{max}r=5
+{step}r=0.1

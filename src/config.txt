@@ -1,0 +1,6 @@
+par_num=3
+n_live=4
+n_all=10
+turns=50
+P_BY=25
+P_AV=20
