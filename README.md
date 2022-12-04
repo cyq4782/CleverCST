@@ -1,25 +1,25 @@
 # CleverCST
 该程序实现了CST中的遗传算法和连续自动化计算，目前仅在2015版本上进行测试。  
 本程序按照如下方式架构：  
-1 遗传算法配置读取，子程序，ReadConfig  
-2 参数配置读取，子程序，ReadParConfig  
-3 遗传算法过程，子程序，DoGA  
-	3.1 初始参数生成，子程序，BeginForPar  
-	3.2 个体估价，函数，CalcValue  
-		3.2.0 初始化，自带方法  
-		3.2.1 建立模型，子程序，MakeModel  
-		3.2.2 设定参数，子程序，SetPar  
-		3.2.3 运行计算并导出1D结果，子程序，CalcAndGetResult1D  
-		3.2.4 计算谐振频率，函数，GetFre  
+* 遗传算法配置读取，子程序，ReadConfig  
+* 参数配置读取，子程序，ReadParConfig  
+* 遗传算法过程，子程序，DoGA  
+	* 初始参数生成，子程序，BeginForPar  
+	* 个体估价，函数，CalcValue  
+		* 初始化，自带方法  
+		* 建立模型，子程序，MakeModel  
+		* 设定参数，子程序，SetPar  
+		* 运行计算并导出1D结果，子程序，CalcAndGetResult1D  
+		* 计算谐振频率，函数，GetFre  
 		（补：初始化，自带代码）  
-		3.2.5 建立模型，子程序，MakeModel   
-		3.2.6 设定频率，子程序，SetFre  
-		3.2.7 运行计算并导出3D结果，子程序，CalcAndGetResult2D  
-		3.2.8 计算估价函数，函数，PG  
-	3.3 遗传算法生成新个体，函数，MakeNewBody  
-	3.4 输出该代概况，子程序，OutputProfile  
+		* 建立模型，子程序，MakeModel   
+		* 设定频率，子程序，SetFre  
+		* 运行计算并导出3D结果，子程序，CalcAndGetResult2D  
+		* 计算估价函数，函数，PG  
+	* 遗传算法生成新个体，函数，MakeNewBody  
+	* 输出该代概况，子程序，OutputProfile  
   
-在不同情形下需要修改的代码（*表示可能不需要被修改）：  
+在不同情形下需要修改的代码（\*表示可能不需要被修改）：  
 1.仍为遗传算法：MakeModel，CalcAndGetResult1D*，GetFre*，SetFre*，CalcAndGetResult2D*，PG  
 2.同一问题不同算法：ReadConfig，BeginForPar*，MakeNewBody  
   
